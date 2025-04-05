@@ -1,249 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> PORTFOLIO </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            @media only screen and (max-width: 600px) {
-                body {
-                    background-color: #121212;
-                    color: #FFFFFF;
-                }
-            }
-            #container {
-                font-family: century gothic, sans-serif;
-                font-weight: normal;
-                font-style: normal;
-                background-color: #121212;
-                color: #FFEBE6;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-            }
-            #welcome-section {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                height: 100vh;
-                background-color: #121212;
-                margin: 0px 0px 0px 0px;
-                padding: 260px 0px 0px 0px;
-            }
-            #welcome-section h1 {
-                font-size: 40pt;
-                font-weight: bold;
-                font-style: normal;
-                text-align: center;
-                text-transform: uppercase;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-                letter-spacing: 3px;
-                vertical-align: middle;
-            }
-            #welcome-section p {
-                font-size: 14pt;
-                font-weight: normal;
-                font-style: italic;
-                letter-spacing: 3px;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-                text-align: center;
-                text-transform: uppercase;
-                vertical-align: middle;
-            }
-            
-            #navbar {
-                display: inherit;
-                justify-content: center;
-                margin: 0px 0px 0px 0px;
-                padding: 0px 0px 0px 0px;
-                width: 100%;
-            }
-            #navbar ul {
-                list-style-type: none;
-                margin: 0px 0px 0px 0px;
-                padding: 0px 0px 0px 0px;
-                background-color: #CC2900;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
-            #navbar li {
-                float: left;
-            }
-            #navbar li a {
-                display: block;
-                color: white;
-                text-align: center;
-                margin: 0px 0px 0px 0px;
-                padding: 20px 20px 20px 20px;
-                text-decoration: none;
-            }
-            #navbar li a:hover:not(.active) {
-                background-color: #1A0500;
-                color: #FF3300;
-                padding: 20px 20px 20px 20px;
-            }
-            .content {
-                padding:00px 0px 0px 0px; 
-                margin: 0px 0px 0px 0px; 
-                background-color: transparent; 
-            }
-            
-            #projects {
-                background-color: #181818;
-                margin: 0px 0px 0px 0px;
-                padding: 0px 0px 0px 0px;
-                height: 100vh;
-            }
-            #projects h1 {
-                font-size: 40pt;
-                font-weight: bold;
-                font-style: normal;
-                text-align: center;
-                text-transform: uppercase;
-                padding: 100px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-                letter-spacing: 3px;
-                vertical-align: middle;
-            }
-            .project-tile {
-                display: grid;
-                grid-template-columns: auto auto auto;
-                background-color: transparent;
-                padding: 0px 0px 0px 0px;
-                margin: 50px 0px 0px 345px;
-                grid-row-gap: 0px;
-                grid-column-gap: 20px;
-                width: 50%;
-            }
-            .project-tile img {
-                width: auto;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-            }
-            .project-item {
-                background-color: transparent;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px;
-                font-size: 30px;
-                text-align: center;
-                color: #FFFFFF;
-                
-            }
-            .project-item p {
-                color:#FF471A;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 16pt;
-                font-weight: bold;
-                text-decoration: underline;
-            }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#cv" class="nav-link">CV</a>
+  </nav>
 
-            #contact {
-                background-color: #181818;
-                margin: 0px 0px 0px 0px;
-                padding: 0px 0px 0px 0px;
-                height: 100vh;
-            }
-            #contact h1 {
-                font-size: 40pt;
-                font-weight: bold;
-                font-style: normal;
-                text-align: center;
-                text-transform: uppercase;
-                padding: 100px 0px 50px 0px;
-                margin: 0px 0px 0px 0px;
-                letter-spacing: 3px;
-                vertical-align: middle;
-            }
-            .foxx-message {
-                text-align: center; 
-                padding-top: 10px; 
-                margin-top: -10px; 
-                color:#FF471A;
-                font-style: italic;
-            }
-            .icon-bar {
-                width: auto;
-                background-color: transparent;
-                overflow: auto;
-                margin: 10px 350px 10px 350px;
-                padding: 10px 10px 10px 10px;
-            }
-            .icon-bar a {
-                float: left;
-                width: auto;
-                text-align: center;
-                margin: 10px 30px 10px 50px;
-                padding: 10px 10px 10px 10px;
-                transition: all 0.3s ease;
-                color: white;
-            }
-        </style>
-    </head>
-    <body id="container">
-        <nav id="navbar">
-            <ul>
-                <li> <a href="#welcome-section"> About </a> </li>
-                <li> <a href="#projects"> Work </a> </li>
-                <li> <a href="#contact"> Contact </a> </li>
-            </ul>
-        </nav>
-        <div class="content">
-            <!-- Start of Welcome Section -->
-            <div id="welcome-section"> 
-                <h1> Hi! I am <span style="color:#FF471A">HAXOR</span> </h1>
-                <p> Gamer and Editor </p>
-            </div>
-            <!-- End of Welcome Section -->
-            
-            <!-- Start of Projects -->
-            <div id="projects">
-                <h1> Here are some of <span style="color:#FF471A">my projects</span> </h1>
-                <div class="project-tile">
-                    <div class="project-item">
-                        <a href="https://aalacanaria.github.io/TributePage/" target="_blank">
-                            <img src="images/tributePageThumbnail.png" alt="CONG TV" height="250" width="250"/>
-                        <p> Tribute Page </p>
-                        </a>
-                    </div>
-                    <div class="project-item"> 
-                        <a href="https://aalacanaria.github.io/ProductLandingPage/" target="_blank">
-                            <img src="images/productLandingPageThumbnail.png" alt="WATCHDOGS" height="250" width="250" /> 
-                        <p> Product Landing Page </p>
-                        </a>
-                    </div>
-                </div> 
-            </div>
-            <!-- End of Projects -->
-            
-            <!-- Start of Contacts -->
-            <div id="contact">
-                <h1> Let's be <span style="color:#FF471A">friends!</span> </h1>
-                <center> <img src="images/kurama.png" alt="-Foxx" height="150" width="150" /> </center>
-                <p class="foxx-message"> Can I have some cookies? </p>
-                <div class="icon-bar">
-                    <a href="https://www.facebook.com/AA.Lacanaria" target="_blank"> 
-                        <img src="images/icons/045-facebook.png" width="50" alt="Facebook Profile" /> 
-                    </a>
-                    
-                    <a href="https://www.instagram.com/aa.foxx_/" target="_blank"> 
-                        <img src="images/icons/034-instagram.png" width="50" alt="Instagram Profile" /> 
-                    </a> 
-                    
-                    <a href="https://twitter.com/armel_lacanaria" target="_blank"> 
-                        <img src="images/icons/013-twitter-1.png" width="50" alt="Twitter Profile" /> 
-                    </a> 
-                    
-                    <a href="https://github.com/AALacanaria" target="_blank"> 
-                        <img src="images/icons/039-github.png" width="50" alt="Github Profile" /> 
-                    </a>
-                </div>
-            </div>
-            <!-- End of Contacts -->
-        </div>
-    </body>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="academic">Academic</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="project-grid">
+      <!-- Academic Project Example -->
+      <div class="project-card academic">
+        <span class="project-label academic">Academic</span>
+        <h3 class="project-title">AI Capstone Project</h3>
+        <p class="project-desc">A machine learning model for predicting X.</p>
+        <a href="#" class="project-link">View Paper</a>
+      </div>
+
+      <!-- Personal Project Example -->
+      <div class="project-card personal">
+        <span class="project-label personal">Personal</span>
+        <h3 class="project-title">Recipe App</h3>
+        <p class="project-desc">A React app for sharing recipes.</p>
+        <a href="https://github.com/yourusername/recipe-app" class="project-link">GitHub Repo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV Section -->
+  <section id="cv" class="section cv-section">
+    <h2 class="section-title">Curriculum Vitae</h2>
+    <a href="assets/cv.pdf" download class="cv-download">Download CV</a>
+  </section>
+
+  <script src="scripts/main.js"></script>
+</body>
 </html>
