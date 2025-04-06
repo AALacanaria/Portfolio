@@ -1,0 +1,12 @@
+[data-theme="dark"] {
+	.education-year,
+	.coursework,
+	.company-address,
+	.timeline {
+		color: #ccc;
+	}
+    
+	.school-name {
+		border-bottom-color: #444;
+	}
+}

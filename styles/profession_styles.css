@@ -1,0 +1,67 @@
+/* Professional History Style */
+.profession-item {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--accent);
+}
+
+.profession-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.profession-item h3 {
+	color: var(--accent);
+	margin-bottom: 0.2rem;
+	font-size: 1.2rem;
+}
+
+.company {
+	font-weight: 500;
+	margin: 0.25rem 0;
+	font-size: 0.95rem;
+}
+
+.location {
+	font-weight: normal;
+	font-size: 0.95rem;
+	color: #666;
+	margin: 0.25rem 0;
+}
+
+.duration {
+	font-weight: 500;
+	font-size: 0.95rem;
+	margin: 0.25rem 0 0.5rem 0;
+	color: #888;
+}
+
+.responsibilities {
+	font-size: 0.95rem;
+	margin-top: 0rem;
+}
+
+/* Responsibilities list */
+.responsibilities ul {
+	padding-left: 2rem;
+	margin: -0.70rem 0 0.5rem 0;
+  }
+  
+  .responsibilities li {
+	line-height: 1.4;
+	margin-bottom: 0.25rem;
+	padding-left: 0.3rem;
+  }
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] {
+	.location,
+	.duration {
+		color: #ccc;
+	}
+	
+	.profession-item {
+		border-bottom-color: #444;
+	}
+}

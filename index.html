@@ -1,56 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Portfolio</title>
-  <link rel="stylesheet" href="styles/main.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Armel Lacanaria | Portfolio</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/education_styles.css">
+	<link rel="stylesheet" href="styles/profession_styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#cv" class="nav-link">CV</a>
-  </nav>
+	<!-- Theme Toggle -->
+	<button id="theme-toggle" class="theme-toggle">
+		<i class="fas fa-moon"></i>
+	</button>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    
-    <!-- Filter Buttons -->
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="academic">Academic</button>
-      <button class="filter-btn" data-filter="personal">Personal</button>
-    </div>
+	<!-- Header -->
+	<header class="header">
+		<h1>ARMEL BACDAYAN LACANARIA</h1>
+		<div class="contact-info">
+		<p><i class="fas fa-envelope"></i> aalacanaria1112@gmail.com | lacanaria1112@gmail.com</p>
+		<p><i class="fas fa-phone"></i> +63 961 016 6195</p>
+		</div>
+	</header>
 
-    <!-- Project Grid -->
-    <div class="project-grid">
-      <!-- Academic Project Example -->
-      <div class="project-card academic">
-        <span class="project-label academic">Academic</span>
-        <h3 class="project-title">AI Capstone Project</h3>
-        <p class="project-desc">A machine learning model for predicting X.</p>
-        <a href="#" class="project-link">View Paper</a>
-      </div>
+	<!-- Summary -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-user"></i> Summary</h2>
+		<p class="summary-text">
+		Motivated Bachelor of Science in Information Technology student specializing in Network and Security, proficient in front-end development 
+		and IT infrastructure support. Passionate about building secure networks and user-friendly web interfaces.
+		</p>
+	</section>
 
-      <!-- Personal Project Example -->
-      <div class="project-card personal">
-        <span class="project-label personal">Personal</span>
-        <h3 class="project-title">Recipe App</h3>
-        <p class="project-desc">A React app for sharing recipes.</p>
-        <a href="https://github.com/yourusername/recipe-app" class="project-link">GitHub Repo</a>
-      </div>
-    </div>
-  </section>
+	<!-- Professional History -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-briefcase"></i> Professional History</h2>
+		<div class="profession-item">
+			<h3>IT Support Intern</h3>
+			<p class="company">PRC-CAR, 
+							   <em class="location">No. 09 Otek Street corner Benjamin R. Salvosa Drive, Brgy. Rizal Monument, 2600 Baguio City</em>
+			</p>
+			<p class="duration">June - August 2024</p>
+			<div class="responsibilities">
+				<p>Key Contributions:</p>
+				<ul>
+					<li>Configured LAN connections for varius workstations</li>
+					<li>Troubleshooted hardware/software issues</li>
+					<li>Volunteered in the front desk as administrative aide assistant</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- End of Professional History -->
 
-  <!-- CV Section -->
-  <section id="cv" class="section cv-section">
-    <h2 class="section-title">Curriculum Vitae</h2>
-    <a href="assets/cv.pdf" download class="cv-download">Download CV</a>
-  </section>
+	<!-- Education -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+		<div class="school-name">
+			<h3>University of the Cordilleras</h3>
+			<p class="program">Bachelor of Science in Information Technology, 
+							   <em class="major">Major in Network & Security</em><br>
+			</p>
+			<p class="education-year">2019 - 2025</p>
+			<p class="coursework">Relevant Coursework: 
+				<em>Cisco NetAcad, LinkedIn Learning</em>
+			</p>
+	<h3>Saint Augustine's School</h3>
+			<p class="program">Senior High School, 
+							   <em class="major">Science, Technology, Engineering, and Mathematics Strand</em><br>
+				
+			</p>
+			<p class="education-year">2017 - 2019</p>
+			<p class="coursework">Relevant Coursework: 
+				<em>Adobe Master Suite, Website Development</em>
+			</p>
+		</div>
+	</section>
+	<!-- End of Education -->
 
-  <script src="scripts/main.js"></script>
+	<!-- Skills -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+		<div class="skills-grid">
+		<div class="skill-category">
+			<h3>Technical</h3>
+			<div class="skill-tags">
+			<span class="skill-tag">HTML/CSS</span>
+			<span class="skill-tag">JavaScript</span>
+			<span class="skill-tag">Network Routing</span>
+			</div>
+		</div>
+		<div class="skill-category">
+			<h3>Software</h3>
+			<div class="skill-tags">
+			<span class="skill-tag">Microsoft Office</span>
+			<span class="skill-tag">Cisco Packet Tracer</span>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<!-- Awards & Certificates -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-award"></i> Certificates</h2>
+		<div class="certificate-grid">
+		<div class="certificate-card" onclick="openModal('assets/certificates/cert1.jpg')">
+			<img src="assets/certificates/cert1.jpg" alt="Certificate 1">
+		</div>
+		<!-- Add more certificates -->
+		</div>
+	</section>
+
+	<!-- Published Works -->
+	<section class="section">
+		<h2 class="section-title"><i class="fas fa-code"></i> Projects</h2>
+		<div class="project-cards">
+		<div class="project-card">
+			<h3>Capstone Project</h3>
+			<p>Network Security Monitoring System</p>
+			<div class="tech-stack">
+			<span>Python</span>
+			<span>Wireshark</span>
+			</div>
+			<a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+		</div>
+		</div>
+	</section>
+
+	<!-- Certificate Modal -->
+	<div id="certModal" class="modal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img class="modal-content" id="modalImg">
+	</div>
+
+	<script src="scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+/* Education Section */
+.school-name {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--accent);
+}
+
+.school-name:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.school-name h3 {
+	color: var(--accent);
+	margin-bottom: 0.2rem;
+	font-size: 1.2rem;
+}
+
+.program {
+	margin: 0.25rem 0;
+	font-size: 0.95rem;
+	font-weight: 500;
+}
+
+.major {
+	font-weight: normal;
+}
+
+.education-year {
+	font-size: 0.95rem;
+	font-weight: 500;
+	margin: 0.25rem 0 0.5rem 0;
+	color: #888;
+}
+
+.coursework {
+	margin: 0.5rem 0 0 0;
+	font-size: 0.95rem;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] {
+	.program,
+	.education-year {
+		color: #ccc;
+	}
+}
